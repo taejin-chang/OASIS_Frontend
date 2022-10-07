@@ -1,8 +1,21 @@
+import React, { useState } from "react";
 import Image from "../components/Image";
 import ImageUpload from "../components/ImageUpload";
 import UserInformation from "../components/UserInformation";
 
 const MyPage = () => {
+  const [imagePath, setImagePath] = useState("defaultImage.png");
+  const [imageWidth, setImageWidth] = useState("200");
+  const [imageHeight, setImageHeight] = useState("200");
+  const [altMessage, setAltMessage] = useState("사진을 등록해 주세요");
+
+  const [id, setId] = useState("eeaeeon");
+  const [name, setName] = useState("이재연");
+  const [email, setEmail] = useState("test.com");
+  const [department, setDepartment] = useState("isign team 2");
+  const [authority, setAuthority] = useState("일반 사용자");
+  const [birthday, setBirthday] = useState("1990.08.17");
+
   const onClickImageUpload = () => {
     console.log("onClickImageUpload");
   };
@@ -26,10 +39,10 @@ const MyPage = () => {
           <tr>
             <td>
               <Image
-                path={require("./defaultImage.png")}
-                width="200"
-                height="200"
-                alt="image not found"
+                path={require("./" + imagePath)}
+                width={imageWidth}
+                height={imageHeight}
+                alt={altMessage}
               />
               <ImageUpload
                 onClickImageUpload={onClickImageUpload}
@@ -38,12 +51,12 @@ const MyPage = () => {
             </td>
             <td>
               <UserInformation
-                id="eeaeeon"
-                name="이재연"
-                email="test.com"
-                department="isign team 2"
-                authority="일반사용자"
-                birthday="1990.08.17"
+                id={id}
+                name={name}
+                email={email}
+                department={department}
+                authority={authority}
+                birthday={birthday}
                 onClickCalendar={onClickCalendar}
                 onChangeName={onChangeName}
                 onChangeEmail={onChangeEmail}
