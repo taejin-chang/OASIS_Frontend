@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Footer from "../components/Footer";
 import Image from "../components/Image";
 import ImageUpload from "../components/ImageUpload";
 import UserInformation from "../components/UserInformation";
@@ -31,10 +32,13 @@ const MyPage = () => {
   const onChangeEmail = () => {
     console.log("onChangeEmail");
   };
+  const onClickSave = () => {
+    console.log("onClickSave");
+  };
 
   return (
     <div>
-      <table>
+      <table style={{ width: "100%" }}>
         <tbody>
           <tr>
             <td>
@@ -65,6 +69,7 @@ const MyPage = () => {
           </tr>
         </tbody>
       </table>
+      <Footer onClickSave={onClickSave} />
     </div>
   );
 };
