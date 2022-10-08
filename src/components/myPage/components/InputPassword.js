@@ -1,3 +1,5 @@
+import { TextField } from "@mui/material";
+
 const InputPassword = ({
   currentPassword,
   newPassword,
@@ -6,44 +8,60 @@ const InputPassword = ({
   onChangeNewPassword,
   onChangeConfirmPassword,
 }) => {
+  const textFieldCommonStyle = {
+    width: "30%",
+  };
+
   return (
     <div>
-      <table>
+      <table style={{ width: "100%" }}>
         <tbody>
           <tr>
             <td>
-              <label>현재 비밀번호</label>
-            </td>
-            <td>
-              <input
-                type="text"
+              <TextField
+                required
+                label="현재 비밀번호"
+                variant="standard"
+                placeholder="비밀번호를 입력해 주세요"
+                InputLabelProps={{
+                  shrink: true,
+                }}
+                style={textFieldCommonStyle}
                 onChange={onChangeCurrentPassword}
                 value={currentPassword}
-              ></input>
+              />
             </td>
           </tr>
           <tr>
             <td>
-              <label>새 비밀번호</label>
-            </td>
-            <td>
-              <input
-                type="text"
+              <TextField
+                required
+                label="새 비밀번호"
+                variant="standard"
+                placeholder="비밀번호를 입력해 주세요"
+                InputLabelProps={{
+                  shrink: true,
+                }}
+                style={textFieldCommonStyle}
                 onChange={onChangeNewPassword}
                 value={newPassword}
-              ></input>
+              />
             </td>
           </tr>
           <tr>
             <td>
-              <label>새 비밀번호 확인</label>
-            </td>
-            <td>
-              <input
-                type="text"
+              <TextField
+                required
+                label="새 비밀번호 확인"
+                variant="standard"
+                placeholder="비밀번호를 입력해 주세요"
+                InputLabelProps={{
+                  shrink: true,
+                }}
+                style={textFieldCommonStyle}
                 onChange={onChangeConfirmPassword}
                 value={confirmPassword}
-              ></input>
+              />
             </td>
           </tr>
         </tbody>

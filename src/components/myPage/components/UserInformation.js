@@ -1,3 +1,6 @@
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import { TextField, InputAdornment } from "@mui/material";
+
 const UserInformation = ({
   id,
   name,
@@ -15,51 +18,90 @@ const UserInformation = ({
         <tbody>
           <tr>
             <td>
-              <label>아이디</label>
-            </td>
-            <td>
-              <label>{id}</label>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label>이름</label>
-            </td>
-            <td>
-              <input type="text" value={name} onChange={onChangeName}></input>
+              <TextField
+                label="아이디"
+                variant="standard"
+                InputProps={{
+                  readOnly: true,
+                }}
+                value={id}
+              />
             </td>
           </tr>
           <tr>
             <td>
-              <label>이메일</label>
-            </td>
-            <td>
-              <input type="text" value={email} onChange={onChangeEmail}></input>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label>소속</label>
-            </td>
-            <td>
-              <label>{department}</label>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label>권한</label>
-            </td>
-            <td>
-              <label>{authority}</label>
+              <TextField
+                required
+                id="standard-required"
+                label="이름"
+                variant="standard"
+                placeholder="이름을 입력해 주세요"
+                InputLabelProps={{
+                  shrink: true,
+                }}
+                value={name}
+                onChange={onChangeName}
+              />
             </td>
           </tr>
           <tr>
             <td>
-              <label>생일</label>
+              <TextField
+                required
+                id="standard-required"
+                label="이메일"
+                variant="standard"
+                placeholder="이메일을 입력해 주세요"
+                InputLabelProps={{
+                  shrink: true,
+                }}
+                value={email}
+                onChange={onChangeEmail}
+              />
             </td>
+          </tr>
+          <tr>
             <td>
-              <button onClick={onClickCalendar}>달력</button>
-              <label>{birthday}</label>
+              <TextField
+                label="소속"
+                variant="standard"
+                InputProps={{
+                  readOnly: true,
+                }}
+                value={department}
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <TextField
+                label="권한"
+                variant="standard"
+                InputProps={{
+                  readOnly: true,
+                }}
+                value={authority}
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <TextField
+                label="생일"
+                variant="standard"
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <CalendarMonthIcon
+                        color="primary"
+                        onClick={onClickCalendar}
+                      ></CalendarMonthIcon>
+                    </InputAdornment>
+                  ),
+                  readOnly: true,
+                }}
+                value={birthday}
+              />
             </td>
           </tr>
         </tbody>
