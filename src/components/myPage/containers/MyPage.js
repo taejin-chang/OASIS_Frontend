@@ -26,11 +26,13 @@ const MyPage = () => {
   const onClickCalendar = () => {
     console.log("onClickCalendar");
   };
-  const onChangeName = () => {
+  const onChangeName = (e) => {
     console.log("onChangeName");
+    setName(e.target.value);
   };
-  const onChangeEmail = () => {
+  const onChangeEmail = (e) => {
     console.log("onChangeEmail");
+    setEmail(e.target.value);
   };
   const onClickSave = () => {
     console.log("onClickSave");

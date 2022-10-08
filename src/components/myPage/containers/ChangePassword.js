@@ -7,14 +7,17 @@ const ChangePassword = () => {
   const [newPassword, setnNwPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  const onChangeCurrentPassword = () => {
+  const onChangeCurrentPassword = (e) => {
     console.log("onChangeCurrentPassword");
+    setCurrentPassword(e.target.value);
   };
-  const onChangeNewPassword = () => {
+  const onChangeNewPassword = (e) => {
     console.log("onChangeNewPassword");
+    setnNwPassword(e.target.value);
   };
-  const onChangeConfirmPassword = () => {
+  const onChangeConfirmPassword = (e) => {
     console.log("onChangeConfirmPassword");
+    setConfirmPassword(e.target.value);
   };
   const onClickSave = () => {
     console.log("onClickSave");
