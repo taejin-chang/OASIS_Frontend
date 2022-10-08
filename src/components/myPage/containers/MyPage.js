@@ -69,7 +69,7 @@ const MyPage = () => {
           </tr>
         </tbody>
       </table>
-      <Footer onClickSave={onClickSave} />
+      <Footer buttonName="저장" onClickSave={onClickSave} />
     </div>
   );
 };

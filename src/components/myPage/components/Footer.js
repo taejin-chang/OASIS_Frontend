@@ -1,7 +1,7 @@
-const Footer = ({ onClickSave }) => {
+const Footer = ({ buttonName, onClickSave }) => {
   return (
     <div style={{ textAlign: "right" }}>
-      <button onClick={onClickSave}>저장</button>
+      <button onClick={onClickSave}>{buttonName}</button>
     </div>
   );
 };
