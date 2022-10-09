@@ -7,33 +7,25 @@ const ImageUpload = ({
 }) => {
   return (
     <div>
-      <table>
-        <tbody>
-          <tr>
-            <td style={{ width: imageWidth }}>
-              <Button
-                variant="contained"
-                fullWidth={true}
-                onClick={onClickImageUpload}
-              >
-                프로필 사진 업로드
-              </Button>
-            </td>
-          </tr>
-          <tr>
-            <td style={{ width: imageWidth }}>
-              <Button
-                variant="outlined"
-                color="error"
-                fullWidth={true}
-                onClick={onClickImageRemove}
-              >
-                프로필 사진 제거
-              </Button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div>
+        <Button
+          variant="contained"
+          style={{ width: imageWidth }}
+          onClick={onClickImageUpload}
+        >
+          프로필 사진 업로드
+        </Button>
+      </div>
+      <div>
+        <Button
+          variant="outlined"
+          color="error"
+          style={{ width: imageWidth }}
+          onClick={onClickImageRemove}
+        >
+          프로필 사진 제거
+        </Button>
+      </div>
     </div>
   );
 };

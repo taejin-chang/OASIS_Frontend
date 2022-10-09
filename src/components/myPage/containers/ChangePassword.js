@@ -25,15 +25,21 @@ const ChangePassword = () => {
 
   return (
     <div>
-      <InputPassword
-        currentPassword={currentPassword}
-        newPassword={newPassword}
-        confirmPassword={confirmPassword}
-        onChangeCurrentPassword={onChangeCurrentPassword}
-        onChangeNewPassword={onChangeNewPassword}
-        onChangeConfirmPassword={onChangeConfirmPassword}
-      />
-      <Footer buttonName="변경" onClickSave={onClickSave} />
+      <div style={{ width: "100%", textAlign: "center", padding: "20px" }}>
+        <InputPassword
+          currentPassword={currentPassword}
+          newPassword={newPassword}
+          confirmPassword={confirmPassword}
+          onChangeCurrentPassword={onChangeCurrentPassword}
+          onChangeNewPassword={onChangeNewPassword}
+          onChangeConfirmPassword={onChangeConfirmPassword}
+        />
+      </div>
+      <div style={{ width: "100%" }}>
+        <div style={{ width: "75%", textAlign: "right" }}>
+          <Footer buttonName="변경" onClickSave={onClickSave} />
+        </div>
+      </div>
     </div>
   );
 };

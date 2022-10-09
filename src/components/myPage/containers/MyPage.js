@@ -40,39 +40,53 @@ const MyPage = () => {
 
   return (
     <div>
-      <table style={{ width: "100%" }}>
-        <tbody>
-          <tr>
-            <td style={{ width: "20%" }}>
-              <Image
-                path={require("./" + imagePath)}
-                width={imageWidth}
-                height={imageHeight}
-                alt={altMessage}
-              />
-              <ImageUpload
-                imageWidth={imageWidth}
-                onClickImageUpload={onClickImageUpload}
-                onClickImageRemove={onClickImageRemove}
-              />
-            </td>
-            <td>
-              <UserInformation
-                id={id}
-                name={name}
-                email={email}
-                department={department}
-                authority={authority}
-                birthday={birthday}
-                onClickCalendar={onClickCalendar}
-                onChangeName={onChangeName}
-                onChangeEmail={onChangeEmail}
-              />
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <Footer buttonName="저장" onClickSave={onClickSave} />
+      <div style={{ width: "95%" }}>
+        <div
+          style={{
+            width: "47%",
+            float: "left",
+            textAlign: "right",
+            padding: "20px",
+          }}
+        >
+          <Image
+            path={require("./" + imagePath)}
+            width={imageWidth}
+            height={imageHeight}
+            alt={altMessage}
+          />
+          <ImageUpload
+            imageWidth={imageWidth}
+            onClickImageUpload={onClickImageUpload}
+            onClickImageRemove={onClickImageRemove}
+          />
+        </div>
+        <div
+          style={{
+            width: "47%",
+            float: "left",
+            textAlign: "left",
+            padding: "20px",
+          }}
+        >
+          <UserInformation
+            id={id}
+            name={name}
+            email={email}
+            department={department}
+            authority={authority}
+            birthday={birthday}
+            onClickCalendar={onClickCalendar}
+            onChangeName={onChangeName}
+            onChangeEmail={onChangeEmail}
+          />
+        </div>
+      </div>
+      <div style={{ width: "100%" }}>
+        <div style={{ width: "75%", textAlign: "right" }}>
+          <Footer buttonName="저장" onClickSave={onClickSave} />
+        </div>
+      </div>
     </div>
   );
 };

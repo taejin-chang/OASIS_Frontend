@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 
 const Footer = ({ buttonName, onClickSave }) => {
   return (
-    <div style={{ textAlign: "right" }}>
+    <div>
       <Button variant="contained" onClick={onClickSave}>
         {buttonName}
       </Button>
