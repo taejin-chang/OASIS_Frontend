@@ -1,11 +1,21 @@
+import SignIn from "./components/login/presentation/Signin";
 import MyPage from "./components/myPage/containers/MyPage";
-import SignIn from "./components/myPage/presentational/Signin";
+import ChangePassword from "./components/changePassword/containers/ChangePassword";
+import EnvironmentConfiguration from "./components/configuration/containers/EnvironmentConfiguration";
 
 function App() {
   return (
     <div>
-      <SignIn />
-      {/*<MyPage/>*/}
+      {/*<SignIn />*/}
+      {/* <div>
+        <MyPage />
+      </div> */}
+      {/* <div>
+        <ChangePassword />
+      </div> */}
+      <div>
+        <EnvironmentConfiguration />
+      </div>
     </div>
   );
 }
