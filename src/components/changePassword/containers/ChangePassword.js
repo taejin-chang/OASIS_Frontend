@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import InputPassword from "../components/InputPassword";
-import Footer from "../components/Footer";
+import InputPassword from "../presentational/InputPassword";
+import Save from "../../common/presentational/Save";
 
 const ChangePassword = () => {
   const [data, setData] = useState({
@@ -41,7 +41,7 @@ const ChangePassword = () => {
       </div>
       <div style={{ width: "100%" }}>
         <div style={{ width: "75%", textAlign: "right" }}>
-          <Footer buttonName="변경" onClickSave={onClickSave} />
+          <Save buttonName="변경" onClickSave={onClickSave} />
         </div>
       </div>
     </div>

@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import Footer from "../components/Footer";
-import Image from "../components/Image";
-import ImageUpload from "../components/ImageUpload";
-import UserInformation from "../components/UserInformation";
+import Save from "../../common/presentational/Save";
+import Image from "../presentational/Image";
+import ImageUpload from "../presentational/ImageUpload";
+import UserInformation from "../presentational/UserInformation";
 
 const MyPage = () => {
   const [data, setData] = useState({
-    imagePath: "defaultImage.png",
+    imagePath: "userDefaultImage.png",
     imageWidth: 200,
     imageHeight: 200,
     altMessage: "사진을 등록해 주세요",
@@ -65,7 +65,7 @@ const MyPage = () => {
           }}
         >
           <Image
-            path={require("./" + imagePath)}
+            path={require("../../../assets/image/" + imagePath)}
             width={imageWidth}
             height={imageHeight}
             alt={altMessage}
@@ -99,7 +99,7 @@ const MyPage = () => {
       </div>
       <div style={{ width: "100%" }}>
         <div style={{ width: "75%", textAlign: "right" }}>
-          <Footer buttonName="저장" onClickSave={onClickSave} />
+          <Save buttonName="저장" onClickSave={onClickSave} />
         </div>
       </div>
     </div>
