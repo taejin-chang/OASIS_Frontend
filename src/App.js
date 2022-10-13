@@ -1,5 +1,5 @@
 import MyPage from "./components/myPage/containers/MyPage";
-import SignIn from "./components/myPage/presentational/Signin";
+import SignIn from "./components/login/presentational/Signin";
 
 function App() {
   return (
