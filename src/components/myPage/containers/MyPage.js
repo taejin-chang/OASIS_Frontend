@@ -1,21 +1,36 @@
 import React, { useState } from "react";
-import Footer from "../components/Footer";
-import Image from "../components/Image";
-import ImageUpload from "../components/ImageUpload";
-import UserInformation from "../components/UserInformation";
+import Save from "../../common/presentational/Save";
+import Image from "../presentational/Image";
+import ImageUpload from "../presentational/ImageUpload";
+import UserInformation from "../presentational/UserInformation";
 
 const MyPage = () => {
-  const [imagePath, setImagePath] = useState("defaultImage.png");
-  const [imageWidth, setImageWidth] = useState(200);
-  const [imageHeight, setImageHeight] = useState(200);
-  const [altMessage, setAltMessage] = useState("사진을 등록해 주세요");
+  const [data, setData] = useState({
+    imagePath: "userDefaultImage.png",
+    imageWidth: 200,
+    imageHeight: 200,
+    altMessage: "사진을 등록해 주세요",
 
-  const [id, setId] = useState("test1234");
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [department, setDepartment] = useState("isign team 2");
-  const [authority, setAuthority] = useState("일반 사용자");
-  const [birthday, setBirthday] = useState("1990.08.17");
+    id: "test1234",
+    name: "",
+    email: "",
+    department: "isign team 2",
+    authority: "일반 사용자",
+    birthday: "1990.08.17",
+  });
+
+  const {
+    imagePath,
+    imageWidth,
+    imageHeight,
+    altMessage,
+    id,
+    name,
+    email,
+    department,
+    authority,
+    birthday,
+  } = data;
 
   const onClickImageUpload = () => {
     console.log("onClickImageUpload");
@@ -28,11 +43,11 @@ const MyPage = () => {
   };
   const onChangeName = (e) => {
     console.log("onChangeName");
-    setName(e.target.value);
+    setData({ name: e.target.value });
   };
   const onChangeEmail = (e) => {
     console.log("onChangeEmail");
-    setEmail(e.target.value);
+    setData({ email: e.target.value });
   };
   const onClickSave = () => {
     console.log("onClickSave");
@@ -50,7 +65,7 @@ const MyPage = () => {
           }}
         >
           <Image
-            path={require("./" + imagePath)}
+            path={require("../../../assets/image/" + imagePath)}
             width={imageWidth}
             height={imageHeight}
             alt={altMessage}
@@ -84,7 +99,7 @@ const MyPage = () => {
       </div>
       <div style={{ width: "100%" }}>
         <div style={{ width: "75%", textAlign: "right" }}>
-          <Footer buttonName="저장" onClickSave={onClickSave} />
+          <Save buttonName="저장" onClickSave={onClickSave} />
         </div>
       </div>
     </div>

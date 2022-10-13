@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 
-const Footer = ({ buttonName, onClickSave }) => {
+const Save = ({ buttonName, onClickSave }) => {
   return (
     <div>
       <Button variant="contained" onClick={onClickSave}>
@@ -10,4 +10,4 @@ const Footer = ({ buttonName, onClickSave }) => {
   );
 };
 
-export default Footer;
+export default Save;

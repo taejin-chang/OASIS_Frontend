@@ -1,23 +1,27 @@
 import React, { useState } from "react";
-import InputPassword from "../components/InputPassword";
-import Footer from "../components/Footer";
+import InputPassword from "../presentational/InputPassword";
+import Save from "../../common/presentational/Save";
 
 const ChangePassword = () => {
-  const [currentPassword, setCurrentPassword] = useState("");
-  const [newPassword, setnNwPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  const [data, setData] = useState({
+    currentPassword: "",
+    newPassword: "",
+    confirmPassword: "",
+  });
+
+  const { currentPassword, newPassword, confirmPassword } = data;
 
   const onChangeCurrentPassword = (e) => {
     console.log("onChangeCurrentPassword");
-    setCurrentPassword(e.target.value);
+    setData({ setCurrentPassword: e.target.value });
   };
   const onChangeNewPassword = (e) => {
     console.log("onChangeNewPassword");
-    setnNwPassword(e.target.value);
+    setData({ newPassword: e.target.value });
   };
   const onChangeConfirmPassword = (e) => {
     console.log("onChangeConfirmPassword");
-    setConfirmPassword(e.target.value);
+    setData({ setConfirmPassword: e.target.value });
   };
   const onClickSave = () => {
     console.log("onClickSave");
@@ -37,7 +41,7 @@ const ChangePassword = () => {
       </div>
       <div style={{ width: "100%" }}>
         <div style={{ width: "75%", textAlign: "right" }}>
-          <Footer buttonName="변경" onClickSave={onClickSave} />
+          <Save buttonName="변경" onClickSave={onClickSave} />
         </div>
       </div>
     </div>
