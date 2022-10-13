@@ -3,21 +3,25 @@ import InputPassword from "../components/InputPassword";
 import Footer from "../components/Footer";
 
 const ChangePassword = () => {
-  const [currentPassword, setCurrentPassword] = useState("");
-  const [newPassword, setnNwPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  const [data, setData] = useState({
+    currentPassword: "",
+    newPassword: "",
+    confirmPassword: "",
+  });
+
+  const { currentPassword, newPassword, confirmPassword } = data;
 
   const onChangeCurrentPassword = (e) => {
     console.log("onChangeCurrentPassword");
-    setCurrentPassword(e.target.value);
+    setData({ setCurrentPassword: e.target.value });
   };
   const onChangeNewPassword = (e) => {
     console.log("onChangeNewPassword");
-    setnNwPassword(e.target.value);
+    setData({ newPassword: e.target.value });
   };
   const onChangeConfirmPassword = (e) => {
     console.log("onChangeConfirmPassword");
-    setConfirmPassword(e.target.value);
+    setData({ setConfirmPassword: e.target.value });
   };
   const onClickSave = () => {
     console.log("onClickSave");
