@@ -1,5 +1,5 @@
-import PageView from "../presentational/PageView";
-import Connect from "../presentational/Connect";
+import PageView from "../presentation/PageView";
+import Connect from "../presentation/Connect";
 
 const Configuration = () => {
   return (

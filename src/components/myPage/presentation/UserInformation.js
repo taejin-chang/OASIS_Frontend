@@ -16,8 +16,10 @@ const UserInformation = ({
     <div>
       <div>
         <TextField
+          fullWidth
           label="아이디"
           variant="standard"
+          margin="dense"
           InputProps={{
             readOnly: true,
           }}
@@ -27,10 +29,12 @@ const UserInformation = ({
       <div>
         <TextField
           required
+          fullWidth
           id="standard-required"
           label="이름"
           variant="standard"
           placeholder="이름을 입력해 주세요"
+          margin="dense"
           InputLabelProps={{
             shrink: true,
           }}
@@ -41,10 +45,12 @@ const UserInformation = ({
       <div>
         <TextField
           required
+          fullWidth
           id="standard-required"
           label="이메일"
           variant="standard"
           placeholder="이메일을 입력해 주세요"
+          margin="dense"
           InputLabelProps={{
             shrink: true,
           }}
@@ -54,8 +60,10 @@ const UserInformation = ({
       </div>
       <div>
         <TextField
+          fullWidth
           label="소속"
           variant="standard"
+          margin="dense"
           InputProps={{
             readOnly: true,
           }}
@@ -64,8 +72,10 @@ const UserInformation = ({
       </div>
       <div>
         <TextField
+          fullWidth
           label="권한"
           variant="standard"
+          margin="dense"
           InputProps={{
             readOnly: true,
           }}
@@ -74,14 +84,17 @@ const UserInformation = ({
       </div>
       <div>
         <TextField
+          fullWidth
           label="생일"
           variant="standard"
+          margin="dense"
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">
                 <CalendarMonthIcon
                   color="primary"
                   onClick={onClickCalendar}
+                  style={{ color: "#73aa24" }}
                 ></CalendarMonthIcon>
               </InputAdornment>
             ),

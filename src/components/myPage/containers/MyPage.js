@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import Save from "../../common/presentational/Save";
-import Image from "../presentational/Image";
-import ImageUpload from "../presentational/ImageUpload";
-import UserInformation from "../presentational/UserInformation";
+import Save from "../../common/presentation/Save";
+import Image from "../presentation/Image";
+import ImageUpload from "../presentation/ImageUpload";
+import UserInformation from "../presentation/UserInformation";
 
 const MyPage = () => {
   const [data, setData] = useState({
-    imagePath: "userDefaultImage.png",
+    imagePath: "upload.png",
     imageWidth: 200,
     imageHeight: 200,
     altMessage: "사진을 등록해 주세요",
@@ -54,16 +54,9 @@ const MyPage = () => {
   };
 
   return (
-    <div>
-      <div style={{ width: "95%" }}>
-        <div
-          style={{
-            width: "47%",
-            float: "left",
-            textAlign: "right",
-            padding: "20px",
-          }}
-        >
+    <div style={{ width: "800px" }}>
+      <div style={{ width: "100%", float: "left" }}>
+        <div style={{ float: "left", padding: "20px" }}>
           <Image
             path={require("../../../assets/image/" + imagePath)}
             width={imageWidth}
@@ -76,14 +69,7 @@ const MyPage = () => {
             onClickImageRemove={onClickImageRemove}
           />
         </div>
-        <div
-          style={{
-            width: "47%",
-            float: "left",
-            textAlign: "left",
-            padding: "20px",
-          }}
-        >
+        <div style={{ width: "30%", float: "left", padding: "20px" }}>
           <UserInformation
             id={id}
             name={name}
@@ -97,10 +83,8 @@ const MyPage = () => {
           />
         </div>
       </div>
-      <div style={{ width: "100%" }}>
-        <div style={{ width: "75%", textAlign: "right" }}>
-          <Save buttonName="저장" onClickSave={onClickSave} />
-        </div>
+      <div style={{ textAlign: "right" }}>
+        <Save buttonName="저장" onClickSave={onClickSave} />
       </div>
     </div>
   );

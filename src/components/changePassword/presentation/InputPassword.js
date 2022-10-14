@@ -13,9 +13,11 @@ const InputPassword = ({
       <div>
         <TextField
           required
+          fullWidth
           label="현재 비밀번호"
           variant="standard"
           placeholder="비밀번호를 입력해 주세요"
+          margin="dense"
           InputLabelProps={{
             shrink: true,
           }}
@@ -26,9 +28,11 @@ const InputPassword = ({
       <div>
         <TextField
           required
+          fullWidth
           label="새 비밀번호"
           variant="standard"
           placeholder="비밀번호를 입력해 주세요"
+          margin="dense"
           InputLabelProps={{
             shrink: true,
           }}
@@ -39,9 +43,11 @@ const InputPassword = ({
       <div>
         <TextField
           required
+          fullWidth
           label="새 비밀번호 확인"
           variant="standard"
           placeholder="비밀번호를 입력해 주세요"
+          margin="dense"
           InputLabelProps={{
             shrink: true,
           }}
