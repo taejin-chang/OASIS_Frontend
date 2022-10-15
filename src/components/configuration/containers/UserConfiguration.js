@@ -1,8 +1,7 @@
-import PageView from "../presentation/PageView";
-import Connect from "../presentation/Connect";
+import CommonConfiguration from "../presentation/CommonConfiguration";
 import Save from "../../common/presentation/Save";
 
-const EnvironmentConfiguration = () => {
+const UserConfiguration = () => {
   const onClickSave = () => {
     console.log("onClickSave");
   };
@@ -10,10 +9,7 @@ const EnvironmentConfiguration = () => {
   return (
     <div style={{ width: "800px" }}>
       <div style={{ width: "80%", margin: "1em" }}>
-        <PageView />
-      </div>
-      <div style={{ width: "80%", margin: "1em" }}>
-        <Connect />
+        <CommonConfiguration />
       </div>
       <div style={{ textAlign: "right" }}>
         <Save buttonName="저장" onClickSave={onClickSave} />
@@ -22,4 +18,4 @@ const EnvironmentConfiguration = () => {
   );
 };
 
-export default EnvironmentConfiguration;
+export default UserConfiguration;

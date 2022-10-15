@@ -3,7 +3,13 @@ import { TextField } from "@mui/material";
 const InputItem = ({ itemName, placeholder, disabled }) => {
   return (
     <div>
-      <div style={{ width: "20%", padding: "15px 0", float: "left" }}>
+      <div
+        style={{
+          width: "10%",
+          padding: "15px 0",
+          float: "left",
+        }}
+      >
         <label>{itemName}</label>
       </div>
       <div>

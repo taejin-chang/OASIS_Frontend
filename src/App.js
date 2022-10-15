@@ -2,6 +2,7 @@ import SignIn from "./components/login/presentation/Signin";
 import MyPage from "./components/myPage/containers/MyPage";
 import ChangePassword from "./components/changePassword/containers/ChangePassword";
 import EnvironmentConfiguration from "./components/configuration/containers/EnvironmentConfiguration";
+import UserConfiguration from "./components/configuration/containers/UserConfiguration";
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
       <div>
         <EnvironmentConfiguration />
       </div>
+      {/* <div>
+        <UserConfiguration />
+      </div> */}
     </div>
   );
 }
