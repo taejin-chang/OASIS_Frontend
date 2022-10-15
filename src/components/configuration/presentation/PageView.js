@@ -1,14 +1,29 @@
 import SwitchItem from "./SwitchItem";
 import { Divider, Chip } from "@mui/material";
 
-const PageView = () => {
+const PageView = ({
+  alarmPageViewChecked,
+  chartPageViewChecked,
+  handleChangeAlarmPageView,
+  handleChangeChartPageView,
+}) => {
   return (
     <div>
       <Divider>
         <Chip label="페이지 뷰" style={{ fontSize: "1rem" }} />
       </Divider>
-      <SwitchItem itemName="알람" checked={true} fullWidth={true} />
-      <SwitchItem itemName="통계" checked={false} fullWidth={true} />
+      <SwitchItem
+        itemName="알람"
+        fullWidth={true}
+        checked={alarmPageViewChecked}
+        handleChange={handleChangeAlarmPageView}
+      />
+      <SwitchItem
+        itemName="통계"
+        fullWidth={true}
+        checked={chartPageViewChecked}
+        handleChange={handleChangeChartPageView}
+      />
     </div>
   );
 };

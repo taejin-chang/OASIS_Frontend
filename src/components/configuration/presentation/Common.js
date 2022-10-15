@@ -1,13 +1,18 @@
 import SwitchItem from "./SwitchItem";
 import { Divider, Chip } from "@mui/material";
 
-const CommonConfiguration = () => {
+const CommonConfiguration = ({ alarmModeChecked, handleChangeAlarmMode }) => {
   return (
     <div>
       <Divider>
         <Chip label="일반 설정" style={{ fontSize: "1rem" }} />
       </Divider>
-      <SwitchItem itemName="알람 모드" checked={true} fullWidth={true} />
+      <SwitchItem
+        itemName="알람 모드"
+        fullWidth={true}
+        checked={alarmModeChecked}
+        handleChange={handleChangeAlarmMode}
+      />
     </div>
   );
 };

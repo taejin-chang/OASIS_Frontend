@@ -6,7 +6,7 @@ const Save = ({ buttonName, onClickSave }) => {
       <Button
         variant="contained"
         onClick={onClickSave}
-        style={{ backgroundColor: "#73aa24" }}
+        style={{ backgroundColor: "#c2e66d" }}
       >
         {buttonName}
       </Button>

@@ -3,24 +3,24 @@ import { alpha, styled } from "@mui/material/styles";
 
 const GreenSwitch = styled(Switch)(({ theme }) => ({
   "& .MuiSwitch-switchBase.Mui-checked": {
-    color: "#8cbd18",
+    color: "#c2e66d",
     "&:hover": {
-      backgroundColor: alpha("#8cbd18", theme.palette.action.hoverOpacity),
+      backgroundColor: alpha("#c2e66d", theme.palette.action.hoverOpacity),
     },
   },
   "& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track": {
-    backgroundColor: "#8cbd18",
+    backgroundColor: "#c2e66d",
   },
 }));
 
-const SwitchItem = ({ itemName, checked, fullWidth }) => {
+const SwitchItem = ({ itemName, checked, fullWidth, handleChange }) => {
   return (
     <div>
       <div style={{ padding: "9px 0", float: "left" }}>
         <label>{itemName}</label>
       </div>
       <div style={{ textAlign: fullWidth ? "right" : "" }}>
-        <GreenSwitch checked={checked} />
+        <GreenSwitch checked={checked} onChange={handleChange} />
       </div>
     </div>
   );

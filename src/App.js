@@ -10,14 +10,14 @@ function App() {
       {/*<SignIn />*/}
       {/* <div>
         <MyPage />
-      </div> */}
-      {/* <div>
+      </div>
+      <div>
         <ChangePassword />
-      </div> */}
+      </div>
       <div>
         <EnvironmentConfiguration />
       </div>
-      {/* <div>
+      <div>
         <UserConfiguration />
       </div> */}
     </div>
