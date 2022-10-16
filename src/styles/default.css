@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Kakao";
+    src: url("/src/assets/font/KakaoRegular.ttf")
+}
+
+@font-face {
+    font-family: "KakaoBold";
+    src: url("/src/assets/font/KakaoBold.ttf")
+}
+
+
+body {
+    font-family: "Kakao";
+}
