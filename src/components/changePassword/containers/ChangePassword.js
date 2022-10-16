@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import InputPassword from "../presentational/InputPassword";
-import Save from "../../common/presentational/Save";
+import InputPassword from "../presentation/InputPassword";
+import Save from "../../common/presentation/Save";
 
 const ChangePassword = () => {
   const [data, setData] = useState({
@@ -28,8 +28,8 @@ const ChangePassword = () => {
   };
 
   return (
-    <div>
-      <div style={{ width: "100%", textAlign: "center", padding: "20px" }}>
+    <div style={{ width: "500px" }}>
+      <div style={{ width: "60%", padding: "20px" }}>
         <InputPassword
           currentPassword={currentPassword}
           newPassword={newPassword}
@@ -39,10 +39,8 @@ const ChangePassword = () => {
           onChangeConfirmPassword={onChangeConfirmPassword}
         />
       </div>
-      <div style={{ width: "100%" }}>
-        <div style={{ width: "75%", textAlign: "right" }}>
-          <Save buttonName="변경" onClickSave={onClickSave} />
-        </div>
+      <div style={{ textAlign: "right" }}>
+        <Save buttonName="변경" onClickSave={onClickSave} />
       </div>
     </div>
   );

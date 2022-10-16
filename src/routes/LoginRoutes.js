@@ -1,8 +1,9 @@
-import SignIn from "../components/login/presentational/Signin";
+import SignIn from "../components/login/presentation/Signin";
 import ChangePassword from "../components/changePassword/containers/ChangePassword";
 
+// 해결해야함
 const LoginRoutes = {
-    path: '/',
+    path: '/tbd',
     children: [
         {
             path: 'login',

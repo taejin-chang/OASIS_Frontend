@@ -1,4 +1,3 @@
-import Typography from "@mui/material/Typography";
 import {styled} from "@mui/material/styles";
 import {Outlet} from "react-router-dom";
 
@@ -15,6 +14,8 @@ const Contents = ({drawerWidth, open}) => {
     const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
         ({ theme, open }) => ({
             flexGrow: 1,
+            alignItems: 'center',
+            justifyContent:"center",
             padding: theme.spacing(3),
             transition: theme.transitions.create('margin', {
                 easing: theme.transitions.easing.sharp,
@@ -26,13 +27,14 @@ const Contents = ({drawerWidth, open}) => {
                     easing: theme.transitions.easing.easeOut,
                     duration: theme.transitions.duration.enteringScreen,
                 }),
+                justifyContent:"center",
                 marginLeft: 0,
             }),
         }),
     );
 
     return (
-        <Main open={open}>
+        <Main open={open} style={{alignItems:'center'}} >
             <EmptySpace />
             <Outlet />
         </Main>

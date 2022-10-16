@@ -10,7 +10,7 @@ const ImageUpload = ({
       <div>
         <Button
           variant="contained"
-          style={{ width: imageWidth }}
+          style={{ width: imageWidth, backgroundColor: "#613d30" }}
           onClick={onClickImageUpload}
         >
           프로필 사진 업로드
@@ -20,7 +20,11 @@ const ImageUpload = ({
         <Button
           variant="outlined"
           color="error"
-          style={{ width: imageWidth }}
+          style={{
+            width: imageWidth,
+            borderColor: "#bb9167",
+            color: "#bb9167",
+          }}
           onClick={onClickImageRemove}
         >
           프로필 사진 제거
