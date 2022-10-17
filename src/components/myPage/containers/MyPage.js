@@ -3,6 +3,7 @@ import Save from "../../common/presentation/Save";
 import Image from "../presentation/Image";
 import ImageUpload from "../presentation/ImageUpload";
 import UserInformation from "../presentation/UserInformation";
+import { Divider, Typography } from "@mui/material";
 
 const MyPage = () => {
   const [data, setData] = useState({
@@ -11,7 +12,7 @@ const MyPage = () => {
     imageHeight: 200,
     altMessage: "사진을 등록해 주세요",
 
-    id: "test1234",
+    id: "가운데 정렬이 너무 어렵다...",
     name: "",
     email: "",
     department: "isign team 2",
@@ -54,9 +55,18 @@ const MyPage = () => {
   };
 
   return (
-    <div style={{ width: "800px" }}>
+    <div>
+      <Typography
+        gutterBottom
+        variant="h5"
+        component="div"
+        style={{ fontFamily: "Kakao" }}
+      >
+        내 정보
+      </Typography>
+      <Divider />
       <div style={{ width: "100%", float: "left" }}>
-        <div style={{ float: "left", padding: "20px" }}>
+        <div style={{ float: "left", margin: "2em" }}>
           <Image
             path={require("../../../assets/image/" + imagePath)}
             width={imageWidth}
@@ -69,7 +79,7 @@ const MyPage = () => {
             onClickImageRemove={onClickImageRemove}
           />
         </div>
-        <div style={{ width: "30%", float: "left", padding: "20px" }}>
+        <div style={{ width: "300px", float: "left", margin: "2em" }}>
           <UserInformation
             id={id}
             name={name}

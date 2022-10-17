@@ -20,6 +20,8 @@ const UserInformation = ({
           label="아이디"
           variant="standard"
           margin="dense"
+          inputProps={{ style: { fontFamily: "Kakao" } }}
+          InputLabelProps={{ style: { fontFamily: "Kakao" } }}
           InputProps={{
             readOnly: true,
           }}
@@ -35,8 +37,10 @@ const UserInformation = ({
           variant="standard"
           placeholder="이름을 입력해 주세요"
           margin="dense"
+          inputProps={{ style: { fontFamily: "Kakao" } }}
           InputLabelProps={{
             shrink: true,
+            style: { fontFamily: "Kakao" },
           }}
           value={name}
           onChange={onChangeName}
@@ -51,8 +55,10 @@ const UserInformation = ({
           variant="standard"
           placeholder="이메일을 입력해 주세요"
           margin="dense"
+          inputProps={{ style: { fontFamily: "Kakao" } }}
           InputLabelProps={{
             shrink: true,
+            style: { fontFamily: "Kakao" },
           }}
           value={email}
           onChange={onChangeEmail}
@@ -64,6 +70,8 @@ const UserInformation = ({
           label="소속"
           variant="standard"
           margin="dense"
+          inputProps={{ style: { fontFamily: "Kakao" } }}
+          InputLabelProps={{ style: { fontFamily: "Kakao" } }}
           InputProps={{
             readOnly: true,
           }}
@@ -76,6 +84,8 @@ const UserInformation = ({
           label="권한"
           variant="standard"
           margin="dense"
+          inputProps={{ style: { fontFamily: "Kakao" } }}
+          InputLabelProps={{ style: { fontFamily: "Kakao" } }}
           InputProps={{
             readOnly: true,
           }}
@@ -88,6 +98,8 @@ const UserInformation = ({
           label="생일"
           variant="standard"
           margin="dense"
+          inputProps={{ style: { fontFamily: "Kakao" } }}
+          InputLabelProps={{ style: { fontFamily: "Kakao" } }}
           InputProps={{
             startAdornment: (
               <InputAdornment position="start">

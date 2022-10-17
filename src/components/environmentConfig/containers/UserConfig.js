@@ -6,7 +6,7 @@ import { useState } from "react";
 const UserConfiguration = () => {
   const [data, setData] = useState({
     alarmModeChecked: false,
-    toggleMenuAlignment: "environmentConfiguration",
+    toggleMenuAlignment: "userConfiguration",
   });
   const { alarmModeChecked, toggleMenuAlignment } = data;
 
@@ -25,14 +25,14 @@ const UserConfiguration = () => {
   };
 
   return (
-    <div style={{ width: "800px" }}>
+    <div style={{ fontFamily: "Kakao" }}>
       <div style={{ margin: "1em" }}>
         <ToggleMenu
           alignment={toggleMenuAlignment}
           handleChange={handleChangeToggleMenu}
         />
       </div>
-      <div style={{ width: "80%", margin: "1em" }}>
+      <div style={{ width: "800px", margin: "1em" }}>
         <CommonConfiguration
           alarmModeChecked={alarmModeChecked}
           handleChangeAlarmMode={handleChangeAlarmMode}

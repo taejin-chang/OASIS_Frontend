@@ -12,7 +12,7 @@ const EnvironmentConfiguration = () => {
     useSlackChecked: false,
     useSmtpChecked: false,
     useTlsChecked: false,
-    slackUrl: "",
+    slackUrl: "여기도 가운데 정렬이 어렵네 ㅠㅠ",
     slackChannel: "",
     smtpServer: "",
     smtpPort: "",
@@ -99,14 +99,14 @@ const EnvironmentConfiguration = () => {
   };
 
   return (
-    <div style={{ width: "800px" }}>
+    <div style={{ fontFamily: "Kakao" }}>
       <div style={{ margin: "1em" }}>
         <ToggleMenu
           alignment={toggleMenuAlignment}
           handleChange={handleChangeToggleMenu}
         />
       </div>
-      <div style={{ width: "80%", margin: "1em" }}>
+      <div style={{ width: "800px", margin: "1em" }}>
         <PageView
           alarmPageViewChecked={alarmPageViewChecked}
           chartPageViewChecked={chartPageViewChecked}
@@ -114,7 +114,7 @@ const EnvironmentConfiguration = () => {
           handleChangeChartPageView={handleChangeChartPageView}
         />
       </div>
-      <div style={{ width: "80%", margin: "1em" }}>
+      <div style={{ width: "800px", margin: "1em" }}>
         <Connect
           useSlackChecked={useSlackChecked}
           useSmtpChecked={useSmtpChecked}

@@ -10,7 +10,10 @@ const PageView = ({
   return (
     <div>
       <Divider>
-        <Chip label="페이지 뷰" style={{ fontSize: "1rem" }} />
+        <Chip
+          label="페이지 뷰"
+          style={{ fontSize: "1rem", fontFamily: "Kakao" }}
+        />
       </Divider>
       <SwitchItem
         itemName="알람"

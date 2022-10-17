@@ -25,7 +25,7 @@ const Connect = ({
   return (
     <div>
       <Divider>
-        <Chip label="연동" style={{ fontSize: "1rem" }} />
+        <Chip label="연동" style={{ fontSize: "1rem", fontFamily: "Kakao" }} />
       </Divider>
       <SwitchItem
         itemName="Slack"
@@ -78,6 +78,7 @@ const Connect = ({
         />
         <FormControlLabel
           label="TLS 사용"
+          sx={{ fontFamily: "Kakao" }}
           control={
             <Checkbox
               checked={useTlsChecked}
