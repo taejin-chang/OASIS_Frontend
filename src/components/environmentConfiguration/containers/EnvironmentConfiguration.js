@@ -16,6 +16,8 @@ const EnvironmentConfiguration = () => {
     slackChannel: "",
     smtpServer: "",
     smtpPort: "",
+    smtpEmail: "",
+    smtpEmailPassword: "",
   });
   const {
     toggleMenuAlignment,
@@ -28,6 +30,8 @@ const EnvironmentConfiguration = () => {
     slackChannel,
     smtpServer,
     smtpPort,
+    smtpEmail,
+    smtpEmailPassword,
   } = data;
 
   const handleChangeToggleMenu = (e, newAlignment) => {
@@ -80,6 +84,16 @@ const EnvironmentConfiguration = () => {
     setData({ ...data, smtpPort: e.target.value });
   };
 
+  const handleChangeSmtpEmail = (e) => {
+    console.log("handleChangeSmtpEmail");
+    setData({ ...data, smtpEmail: e.target.value });
+  };
+
+  const handleChangeSmtpEmailPassword = (e) => {
+    console.log("handleChangeSmtpEmailPassword");
+    setData({ ...data, smtpEmailPassword: e.target.value });
+  };
+
   const handleClickSave = () => {
     console.log("handleClickSave");
   };
@@ -109,6 +123,8 @@ const EnvironmentConfiguration = () => {
           slackChannel={slackChannel}
           smtpServer={smtpServer}
           smtpPort={smtpPort}
+          smtpEmail={smtpEmail}
+          smtpEmailPassword={smtpEmailPassword}
           handleChangeUseSlack={handleChangeUseSlack}
           handleChangeUseSmtp={handleChangeUseSmtp}
           handleChangeUseTls={handleChangeUseTls}
@@ -116,6 +132,8 @@ const EnvironmentConfiguration = () => {
           handleChangeSlackChannel={handleChangeSlackChannel}
           handleChangeSmtpServer={handleChangeSmtpServer}
           handleChangeSmtpPort={handleChangeSmtpPort}
+          handleChangeSmtpEmail={handleChangeSmtpEmail}
+          handleChangeSmtpEmailPassword={handleChangeSmtpEmailPassword}
         />
       </div>
       <div style={{ textAlign: "right" }}>

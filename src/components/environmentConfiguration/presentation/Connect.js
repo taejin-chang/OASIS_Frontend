@@ -10,7 +10,8 @@ const Connect = ({
   slackChannel,
   smtpServer,
   smtpPort,
-  smtpSender,
+  smtpEmail,
+  smtpEmailPassword,
   handleChangeUseSlack,
   handleChangeUseSmtp,
   handleChangeUseTls,
@@ -18,7 +19,8 @@ const Connect = ({
   handleChangeSlackChannel,
   handleChangeSmtpServer,
   handleChangeSmtpPort,
-  handleChangeSmtpSender,
+  handleChangeSmtpEmail,
+  handleChangeSmtpEmailPassword,
 }) => {
   return (
     <div>
@@ -63,10 +65,16 @@ const Connect = ({
           onChange={handleChangeSmtpPort}
         />
         <InputItem
-          itemName="발신자"
+          itemName="Email"
           disabled={!useSmtpChecked}
-          value={smtpSender}
-          onChange={handleChangeSmtpSender}
+          value={smtpEmail}
+          onChange={handleChangeSmtpEmail}
+        />
+        <InputItem
+          itemName="Email Password"
+          disabled={!useSmtpChecked}
+          value={smtpEmailPassword}
+          onChange={handleChangeSmtpEmailPassword}
         />
         <FormControlLabel
           label="TLS 사용"
