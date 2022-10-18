@@ -1,6 +1,9 @@
 import Layout from "../components/layout/containers/Layout";
 import MyPage from "../components/myPage/containers/MyPage";
 import SignIn from "../components/login/presentation/Signin";
+import FindId from "../components/login/presentation/FindId";
+import FindPw from "../components/login/presentation/FindPw";
+import UserConfiguration from "../components/userConfiguration/presentation/UserConfiguration";
 import ChangePassword from "../components/changePassword/containers/ChangePassword";
 import AdminConfig from "../components/environmentConfig/containers/AdminConfig";
 import UserConfig from "../components/environmentConfig/containers/UserConfig";
@@ -22,6 +25,18 @@ const MainRoutes = {
     {
       path: "login",
       element: <SignIn />,
+    },
+    {
+      path: "find-id",
+      element: <FindId />,
+    },
+    {
+      path: "find-pw",
+      element: <FindPw />,
+    },
+    {
+      path: "config/user-management",
+      element: <UserConfiguration />,
     },
     {
       path: "change-password",

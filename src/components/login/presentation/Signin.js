@@ -1,14 +1,10 @@
 import * as React from 'react';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -67,7 +63,7 @@ export default function SignIn() {
                             required
                             fullWidth
                             id="email"
-                            label="Email Address"
+                            label="아이디(이메일)을 입력해주세요"
                             name="email"
                             autoComplete="email"
                             autoFocus
@@ -77,7 +73,7 @@ export default function SignIn() {
                             required
                             fullWidth
                             name="password"
-                            label="Password"
+                            label="비밀번호를 입력해주세요"
                             type="password"
                             id="password"
                             autoComplete="current-password"
@@ -90,24 +86,38 @@ export default function SignIn() {
                         <br/>
                         <Grid container textAlign="center">
                             <Grid item xs>
-                                <Link href="#" variant="body2" >
+                                <Link href="#"
+                                      style={{
+                                    color: "inherit",
+                                    fontFamily: "Kakao",
+                                    textDecoration: "none"
+                                }}>
                                     아이디 찾기
                                 </Link>
                                 <span> | </span>
-                                <Link href="#" variant="body2">
+                                <Link href="#"
+                                      style={{
+                                          color: "inherit",
+                                          fontFamily: "Kakao",
+                                          textDecoration: "none"
+                                      }}>
                                     비밀번호 찾기
                                 </Link>
                             </Grid>
                         </Grid>
                         <Button
+                            variant="contained"
+                            style={{
+                                backgroundColor: "#c2e66d",
+                                color: "#000000",
+                                fontFamily: "Kakao"
+                            }}
                             type="submit"
                             fullWidth
-                            variant="contained"
                             sx={{ mt: 4, mb: 2 }}
                             size="large"
-                            color="success"
                         >
-                            Sign In
+                            로그인
                         </Button>
                     </Box>
                 </Box>
