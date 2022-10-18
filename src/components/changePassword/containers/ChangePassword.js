@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import InputPassword from "../presentation/InputPassword";
 import Save from "../../common/presentation/Save";
+import { Divider, Typography } from "@mui/material";
 
 const ChangePassword = () => {
   const [data, setData] = useState({
@@ -28,8 +29,17 @@ const ChangePassword = () => {
   };
 
   return (
-    <div style={{ width: "500px" }}>
-      <div style={{ width: "60%", padding: "20px" }}>
+    <div>
+      <Typography
+        gutterBottom
+        variant="h5"
+        component="div"
+        style={{ fontFamily: "Kakao" }}
+      >
+        비밀번호 변경
+      </Typography>
+      <Divider />
+      <div style={{ width: "300px", margin: "2rem" }}>
         <InputPassword
           currentPassword={currentPassword}
           newPassword={newPassword}

@@ -18,8 +18,10 @@ const InputPassword = ({
           variant="standard"
           placeholder="비밀번호를 입력해 주세요"
           margin="dense"
+          inputProps={{ style: { fontFamily: "Kakao" } }}
           InputLabelProps={{
             shrink: true,
+            style: { fontFamily: "Kakao" },
           }}
           onChange={onChangeCurrentPassword}
           value={currentPassword}
@@ -33,8 +35,10 @@ const InputPassword = ({
           variant="standard"
           placeholder="비밀번호를 입력해 주세요"
           margin="dense"
+          inputProps={{ style: { fontFamily: "Kakao" } }}
           InputLabelProps={{
             shrink: true,
+            style: { fontFamily: "Kakao" },
           }}
           onChange={onChangeNewPassword}
           value={newPassword}
@@ -48,8 +52,10 @@ const InputPassword = ({
           variant="standard"
           placeholder="비밀번호를 입력해 주세요"
           margin="dense"
+          inputProps={{ style: { fontFamily: "Kakao" } }}
           InputLabelProps={{
             shrink: true,
+            style: { fontFamily: "Kakao" },
           }}
           onChange={onChangeConfirmPassword}
           value={confirmPassword}

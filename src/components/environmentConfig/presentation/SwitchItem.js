@@ -16,7 +16,7 @@ const GreenSwitch = styled(Switch)(({ theme }) => ({
 const SwitchItem = ({ itemName, checked, fullWidth, handleChange }) => {
   return (
     <div>
-      <div style={{ padding: "9px 0", float: "left" }}>
+      <div style={{ padding: "7px 0", float: "left" }}>
         <label>{itemName}</label>
       </div>
       <div style={{ textAlign: fullWidth ? "right" : "" }}>

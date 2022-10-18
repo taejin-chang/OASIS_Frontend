@@ -5,7 +5,10 @@ const CommonConfiguration = ({ alarmModeChecked, handleChangeAlarmMode }) => {
   return (
     <div>
       <Divider>
-        <Chip label="일반 설정" style={{ fontSize: "1rem" }} />
+        <Chip
+          label="일반 설정"
+          style={{ fontSize: "1rem", fontFamily: "Kakao" }}
+        />
       </Divider>
       <SwitchItem
         itemName="알람 모드"

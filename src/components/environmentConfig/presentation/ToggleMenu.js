@@ -5,13 +5,20 @@ const ToggleMenu = ({ alignment, handleChange }) => {
     <div>
       <ToggleButtonGroup
         exclusive
-        onChange={handleChange}
         aria-label="Platform"
         color="success"
+        onChange={handleChange}
         value={alignment}
       >
-        <ToggleButton value="environmentConfiguration">환경 설정</ToggleButton>
-        <ToggleButton value="userConfiguration">사용자 설정</ToggleButton>
+        <ToggleButton
+          value="environmentConfiguration"
+          style={{ fontFamily: "Kakao" }}
+        >
+          환경 설정
+        </ToggleButton>
+        <ToggleButton value="userConfiguration" style={{ fontFamily: "Kakao" }}>
+          사용자 설정
+        </ToggleButton>
       </ToggleButtonGroup>
     </div>
   );
