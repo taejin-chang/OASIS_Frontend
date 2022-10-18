@@ -2,6 +2,7 @@ import Layout from "../components/layout/containers/Layout";
 import MyPage from "../components/myPage/containers/MyPage";
 import SignIn from "../components/login/presentation/Signin";
 import ChangePassword from "../components/changePassword/containers/ChangePassword";
+import OperationConfiguration from "../components/operationConfiguration/containers/OperationConfiguration";
 
 
 const MainRoutes = {
@@ -23,6 +24,10 @@ const MainRoutes = {
         {
             path: 'change-password',
             element: <ChangePassword />
+        },
+        {
+            path: 'config/operation',
+            element: <OperationConfiguration />
         }
     ]
 };

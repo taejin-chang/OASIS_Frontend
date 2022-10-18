@@ -1,7 +1,8 @@
 import {styled} from "@mui/material/styles";
 import {Outlet} from "react-router-dom";
+import ConfigurationTab from "./ConfigurationTab";
 
-const Contents = ({drawerWidth, open}) => {
+const Contents = ({drawerWidth, open, isConfigurationPage}) => {
 
     const EmptySpace = styled('div')(({ theme }) => ({
         display: 'flex',
@@ -9,6 +10,14 @@ const Contents = ({drawerWidth, open}) => {
         padding: theme.spacing(0, 1),
         ...theme.mixins.toolbar,
         justifyContent: 'flex-end',
+    }));
+
+    const ConfigurationTabsArea = styled('div')(({ theme }) => ({
+        display: 'flex',
+        alignItems: 'center',
+        padding: theme.spacing(0, 0),
+        ...theme.mixins.toolbar,
+        justifyContent: 'center',
     }));
 
     const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
@@ -36,6 +45,9 @@ const Contents = ({drawerWidth, open}) => {
     return (
         <Main open={open} style={{alignItems:'center'}} >
             <EmptySpace />
+            {isConfigurationPage ? <ConfigurationTabsArea>
+                <ConfigurationTab />
+            </ConfigurationTabsArea> : ''}
             <Outlet />
         </Main>
     );
