@@ -9,16 +9,21 @@ const WorkLog = () => {
     loginUserName: "아무개",
     selectedUserName: "",
     userNameList: [],
+    workDate: "2022.10.21",
   });
-  const { loginUserName, selectedUserName, userNameList } = data;
+  const { loginUserName, selectedUserName, userNameList, workDate } = data;
 
   useEffect(() => {
     if (selectedUserName === "")
       setData({ ...data, selectedUserName: loginUserName });
   }, [data, loginUserName, selectedUserName, userNameList]);
 
+  const handleClickCalendar = () => {
+    console.log("handleClickCalendar");
+  };
+
   return (
-    <div>
+    <div style={{ width: "1000px" }}>
       <Typography
         gutterBottom
         variant="h5"
@@ -34,7 +39,10 @@ const WorkLog = () => {
           userNameList={userNameList}
         />
       </div>
-      <WorkLogRegistration />
+      <WorkLogRegistration
+        workDate={workDate}
+        handleClickCalendar={handleClickCalendar}
+      />
       <WorkLogList />
     </div>
   );

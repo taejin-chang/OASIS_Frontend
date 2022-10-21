@@ -20,9 +20,10 @@ const MenuProps = {
 const SelectUser = (selectedUserName, userNameList) => {
   return (
     <FormControl style={{ width: "200px", margin: "0.5rem" }}>
-      <InputLabel>사용자명</InputLabel>
+      <InputLabel size="small">사용자명</InputLabel>
       <Select
         multiple
+        size="small"
         MenuProps={MenuProps}
         input={<OutlinedInput label="사용자명" />}
       >
