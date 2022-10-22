@@ -1,6 +1,6 @@
 import Layout from "../components/layout/containers/Layout";
 import MyPage from "../components/myPage/containers/MyPage";
-// import UserConfiguration from "../components/userConfiguration/presentation/UserConfiguration";
+import UserManagement from "../components/userConfiguration/containers/UserManagement";
 import ChangePassword from "../components/changePassword/containers/ChangePassword";
 import AdminConfig from "../components/environmentConfig/containers/AdminConfig";
 import UserConfig from "../components/environmentConfig/containers/UserConfig";
@@ -34,10 +34,10 @@ const MainRoutes = {
       path: "find-pw",
       element: <FindPw />,
     },
-    // {
-    //   path: "config/user-management",
-    //   element: <UserConfiguration />,
-    // },
+    {
+      path: "config/user-management",
+      element: <UserManagement />,
+    },
     {
       path: "change-password",
       element: <ChangePassword />,
