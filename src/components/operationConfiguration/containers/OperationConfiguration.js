@@ -1,13 +1,21 @@
 import * as React from 'react';
-import {styled} from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Typography from "@mui/material/Typography";
 import {Button, Card, CardActions, CardContent} from "@mui/material";
 import Container from "@mui/material/Container";
+import {styled} from "@mui/material/styles";
+import LoginSetting from "../presentation/LoginSetting";
 
 const OperationConfiguration = () => {
+
+    const EmptySpace = styled('div')(({ theme }) => ({
+        display: 'flex',
+        alignItems: 'center',
+        padding: theme.spacing(0, 1),
+        ...theme.mixins.toolbar,
+        justifyContent: 'flex-end',
+    }));
+
 
 
     const YourCard = () => {
@@ -47,8 +55,8 @@ const OperationConfiguration = () => {
 
 
     return (
-
         <Container>
+            <EmptySpace />
             <Grid
                 container
                 spacing={3}
@@ -58,7 +66,7 @@ const OperationConfiguration = () => {
             >
                 <Grid item xs={6}>
                     <Grid style={{height: "100%"}}>
-                        <YourCard/>
+                        <LoginSetting />
                     </Grid>
                 </Grid>
                 <Grid item xs={6}>
