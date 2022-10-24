@@ -14,8 +14,9 @@ const WorkLogRegistration = ({
       <div
         style={{
           height: "160px",
-          border: "1px solid #486a16",
+          border: "1px solid #bb9167",
           margin: "1rem",
+          borderRadius: "0.3rem",
         }}
       >
         <div style={{ margin: "0.5rem" }}>

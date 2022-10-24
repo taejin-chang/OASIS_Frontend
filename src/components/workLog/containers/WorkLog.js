@@ -10,8 +10,26 @@ const WorkLog = () => {
     selectedUserName: "",
     userNameList: [],
     workDate: "2022.10.21",
+    workLogList: [
+      {
+        date: "2022.10.24",
+        contents: ["회의 1시간", "리액트 스터디"],
+        isModify: false,
+      },
+      {
+        date: "2022.09.11",
+        contents: ["티타임", "EE-WIN 개발 이슈 처리"],
+        isModify: true,
+      },
+    ],
   });
-  const { loginUserName, selectedUserName, userNameList, workDate } = data;
+  const {
+    loginUserName,
+    selectedUserName,
+    userNameList,
+    workDate,
+    workLogList,
+  } = data;
 
   useEffect(() => {
     if (selectedUserName === "")
@@ -21,6 +39,16 @@ const WorkLog = () => {
   const handleClickCalendar = () => {
     console.log("handleClickCalendar");
   };
+
+  const handleClickModification = () => {
+    console.log("handleClickModification");
+  };
+
+  const handleClickRemoval = () => {
+    console.log("handleClickRemoval");
+  };
+
+  const handleChangeWorkLog = () => {};
 
   return (
     <div style={{ width: "1000px" }}>
@@ -43,7 +71,12 @@ const WorkLog = () => {
         workDate={workDate}
         handleClickCalendar={handleClickCalendar}
       />
-      <WorkLogList />
+      <WorkLogList
+        workLogList={workLogList}
+        handleClickModification={handleClickModification}
+        handleClickRemoval={handleClickRemoval}
+        handleChangeWorkLog={handleChangeWorkLog}
+      />
     </div>
   );
 };
