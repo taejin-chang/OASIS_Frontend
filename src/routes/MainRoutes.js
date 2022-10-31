@@ -8,7 +8,7 @@ import OperationConfiguration from "../components/operationConfiguration/contain
 import LogIn from "../components/login/containers/LogIn";
 import FindPw from "../components/login/containers/FindPw";
 import FindId from "../components/login/containers/FindId";
-
+import WorkLog from "../components/workLog/containers/WorkLog";
 
 const MainRoutes = {
   path: "/",
@@ -50,10 +50,14 @@ const MainRoutes = {
       path: "config/environment/user",
       element: <UserConfig />,
     },
-      {
-          path: 'config/environment/operation',
-          element: <OperationConfiguration />
-      }
+    {
+      path: "config/environment/operation",
+      element: <OperationConfiguration />,
+    },
+    {
+      path: "work-log",
+      element: <WorkLog />,
+    },
   ],
 };
 
