@@ -7,13 +7,10 @@ const UserConfiguration = () => {
   const [data, setData] = useState({
     alarmModeChecked: false,
     toggleMenuAlignment: "userConfiguration",
+    adminButtonClicked: false,
+    userButtonClicked: true,
   });
   const { alarmModeChecked, toggleMenuAlignment } = data;
-
-  const handleChangeToggleMenu = (e, newAlignment) => {
-    console.log("handleChangeToggleMenu");
-    setData({ ...data, toggleMenuAlignment: newAlignment });
-  };
 
   const handleChangeAlarmMode = (e) => {
     console.log("handleChangeAlarmMode, " + e.target.checked);
@@ -29,7 +26,8 @@ const UserConfiguration = () => {
       <div style={{ margin: "1em" }}>
         <ToggleMenu
           alignment={toggleMenuAlignment}
-          handleChange={handleChangeToggleMenu}
+          adminButtonClicked={false}
+          userButtonClicked={true}
         />
       </div>
       <div style={{ width: "800px", margin: "1em" }}>

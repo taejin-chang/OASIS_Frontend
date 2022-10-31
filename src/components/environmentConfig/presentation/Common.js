@@ -7,7 +7,11 @@ const CommonConfiguration = ({ alarmModeChecked, handleChangeAlarmMode }) => {
       <Divider>
         <Chip
           label="일반 설정"
-          style={{ fontSize: "1rem", fontFamily: "Kakao" }}
+          style={{
+            fontSize: "1rem",
+            fontFamily: "Kakao",
+            backgroundColor: "#c2e66d",
+          }}
         />
       </Divider>
       <SwitchItem

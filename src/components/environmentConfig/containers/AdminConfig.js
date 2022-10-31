@@ -34,11 +34,6 @@ const EnvironmentConfiguration = () => {
     smtpEmailPassword,
   } = data;
 
-  const handleChangeToggleMenu = (e, newAlignment) => {
-    console.log("handleChangeToggleMenu");
-    setData({ ...data, toggleMenuAlignment: newAlignment });
-  };
-
   const handleChangeAlarmPageView = (e) => {
     console.log("handleChangeAlarmPageView");
     setData({ ...data, alarmPageViewChecked: e.target.checked });
@@ -103,7 +98,8 @@ const EnvironmentConfiguration = () => {
       <div style={{ margin: "1em" }}>
         <ToggleMenu
           alignment={toggleMenuAlignment}
-          handleChange={handleChangeToggleMenu}
+          adminButtonClicked={true}
+          userButtonClicked={false}
         />
       </div>
       <div style={{ width: "800px", margin: "1em" }}>
