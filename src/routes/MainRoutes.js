@@ -8,7 +8,7 @@ import ChangePassword from "../components/changePassword/containers/ChangePasswo
 import AdminConfig from "../components/environmentConfig/containers/AdminConfig";
 import UserConfig from "../components/environmentConfig/containers/UserConfig";
 import OperationConfiguration from "../components/operationConfiguration/containers/OperationConfiguration";
-
+import WorkLog from "../components/workLog/containers/WorkLog";
 
 const MainRoutes = {
   path: "/",
@@ -50,10 +50,14 @@ const MainRoutes = {
       path: "config/environment/user",
       element: <UserConfig />,
     },
-      {
-          path: 'config/environment/operation',
-          element: <OperationConfiguration />
-      }
+    {
+      path: "config/environment/operation",
+      element: <OperationConfiguration />,
+    },
+    {
+      path: "work-log",
+      element: <WorkLog />,
+    },
   ],
 };
 
