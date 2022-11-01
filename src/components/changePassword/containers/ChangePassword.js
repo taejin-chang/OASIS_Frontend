@@ -14,15 +14,15 @@ const ChangePassword = () => {
 
   const onChangeCurrentPassword = (e) => {
     console.log("onChangeCurrentPassword");
-    setData({ setCurrentPassword: e.target.value });
+    setData({ ...data, setCurrentPassword: e.target.value });
   };
   const onChangeNewPassword = (e) => {
     console.log("onChangeNewPassword");
-    setData({ newPassword: e.target.value });
+    setData({ ...data, newPassword: e.target.value });
   };
   const onChangeConfirmPassword = (e) => {
     console.log("onChangeConfirmPassword");
-    setData({ setConfirmPassword: e.target.value });
+    setData({ ...data, setConfirmPassword: e.target.value });
   };
   const onClickSave = () => {
     console.log("onClickSave");

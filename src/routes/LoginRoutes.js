@@ -1,5 +1,5 @@
-import SignIn from "../components/login/presentation/Signin";
 import ChangePassword from "../components/changePassword/containers/ChangePassword";
+import LogIn from "../components/login/containers/LogIn";
 
 // 해결해야함
 const LoginRoutes = {
@@ -7,7 +7,7 @@ const LoginRoutes = {
     children: [
         {
             path: 'login',
-            element: <SignIn />
+            element: <LogIn />
         },
         {
             path: 'change-password',

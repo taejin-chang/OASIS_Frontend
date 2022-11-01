@@ -1,11 +1,16 @@
 import Layout from "../components/layout/containers/Layout";
 import MyPage from "../components/myPage/containers/MyPage";
-import SignIn from "../components/login/presentation/Signin";
+//import UserManagement from "../components/userConfiguration/containers/UserManagement";
 import ChangePassword from "../components/changePassword/containers/ChangePassword";
 import AdminConfig from "../components/environmentConfig/containers/AdminConfig";
 import UserConfig from "../components/environmentConfig/containers/UserConfig";
 import OperationConfiguration from "../components/operationConfiguration/containers/OperationConfiguration";
-
+import LogIn from "../components/login/containers/LogIn";
+import FindPw from "../components/login/containers/FindPw";
+import FindId from "../components/login/containers/FindId";
+import WorkLog from "../components/workLog/containers/WorkLog";
+import Calendar from "../components/calendar/containers/Calendar";
+import Dashboard from "../components/dashboard/containers/Dashboard";
 
 const MainRoutes = {
   path: "/",
@@ -13,7 +18,7 @@ const MainRoutes = {
   children: [
     {
       path: "/",
-      element: <MyPage />,
+      element: <LogIn />,
     },
     {
       path: "my-page",
@@ -21,8 +26,20 @@ const MainRoutes = {
     },
     {
       path: "login",
-      element: <SignIn />,
+      element: <LogIn />,
     },
+    {
+      path: "find-id",
+      element: <FindId />,
+    },
+    {
+      path: "find-pw",
+      element: <FindPw />,
+    },
+    /*{
+      path: "config/user-management",
+      element: <UserManagement />,
+    },*/
     {
       path: "change-password",
       element: <ChangePassword />,
@@ -35,10 +52,22 @@ const MainRoutes = {
       path: "config/environment/user",
       element: <UserConfig />,
     },
-      {
-          path: 'config/environment/operation',
-          element: <OperationConfiguration />
-      }
+    {
+      path: "config/environment/operation",
+      element: <OperationConfiguration />,
+    },
+    {
+      path: "work-log",
+      element: <WorkLog />,
+    },
+    {
+      path: "calendar",
+      element: <Calendar />,
+    },
+    {
+      path: "dashboard",
+      element: <Dashboard />,
+    },
   ],
 };
 

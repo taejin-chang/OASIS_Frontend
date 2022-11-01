@@ -12,7 +12,11 @@ const PageView = ({
       <Divider>
         <Chip
           label="페이지 뷰"
-          style={{ fontSize: "1rem", fontFamily: "Kakao" }}
+          style={{
+            fontSize: "1rem",
+            fontFamily: "Kakao",
+            backgroundColor: "#c2e66d",
+          }}
         />
       </Divider>
       <SwitchItem

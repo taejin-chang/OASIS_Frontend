@@ -25,7 +25,14 @@ const Connect = ({
   return (
     <div>
       <Divider>
-        <Chip label="연동" style={{ fontSize: "1rem", fontFamily: "Kakao" }} />
+        <Chip
+          label="연동"
+          style={{
+            fontSize: "1rem",
+            fontFamily: "Kakao",
+            backgroundColor: "#c2e66d",
+          }}
+        />
       </Divider>
       <SwitchItem
         itemName="Slack"
