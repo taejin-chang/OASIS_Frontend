@@ -5,6 +5,8 @@ import {Button, Card, CardActions, CardContent} from "@mui/material";
 import Container from "@mui/material/Container";
 import {styled} from "@mui/material/styles";
 import LoginSetting from "../presentation/LoginSetting";
+import AttendancePolicySetting from "../presentation/AttendancePolicySetting";
+import HolidayPolicySetting from "../presentation/HolidayPolicySetting";
 
 const OperationConfiguration = () => {
 
@@ -15,7 +17,6 @@ const OperationConfiguration = () => {
         ...theme.mixins.toolbar,
         justifyContent: 'flex-end',
     }));
-
 
 
     const YourCard = () => {
@@ -56,7 +57,8 @@ const OperationConfiguration = () => {
 
     return (
         <Container>
-            <EmptySpace />
+            <br />
+
             <Grid
                 container
                 spacing={3}
@@ -72,10 +74,10 @@ const OperationConfiguration = () => {
                 <Grid item xs={6}>
                     <Grid container spacing={3}>
                         <Grid item xs={12}>
-                            <YourCard/>
+                            <AttendancePolicySetting />
                         </Grid>
                         <Grid item xs={12}>
-                            <YourCard/>
+                            <HolidayPolicySetting />
                         </Grid>
                     </Grid>
                 </Grid>
