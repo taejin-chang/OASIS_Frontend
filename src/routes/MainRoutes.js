@@ -11,6 +11,7 @@ import FindId from "../components/login/containers/FindId";
 import WorkLog from "../components/workLog/containers/WorkLog";
 import Calendar from "../components/calendar/containers/Calendar";
 import Dashboard from "../components/dashboard/containers/Dashboard";
+import UserManagement from "../components/userConfiguration/containers/UserManagement";
 
 const MainRoutes = {
   path: "/",
@@ -36,10 +37,10 @@ const MainRoutes = {
       path: "find-pw",
       element: <FindPw />,
     },
-    /*{
+    {
       path: "config/user-management",
       element: <UserManagement />,
-    },*/
+    },
     {
       path: "change-password",
       element: <ChangePassword />,

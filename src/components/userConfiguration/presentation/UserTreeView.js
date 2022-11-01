@@ -104,7 +104,7 @@ const UserTreeView = () => {
                     bgColor="#e8f0fe"
                 >
                     <StyledTreeItem
-                        nodeId="3"
+                        nodeId="4"
                         labelText="1팀"
                         labelIcon={SupervisorAccountIcon}
                         labelInfo="5"
@@ -112,7 +112,7 @@ const UserTreeView = () => {
                         // bgColor="#e8f0fe"
                     >
                         <StyledTreeItem
-                            nodeId="4"
+                            nodeId="6"
                             labelText="정철하"
                             // labelIcon={SupervisorAccountIcon}
                             // labelInfo="5"
@@ -120,7 +120,7 @@ const UserTreeView = () => {
                             bgColor="#e8f0fe"
                         />
                         <StyledTreeItem
-                            nodeId="5"
+                            nodeId="7"
                             labelText="김명진"
                             // labelIcon={SupervisorAccountIcon}
                             // labelInfo="5"
@@ -128,7 +128,7 @@ const UserTreeView = () => {
                             bgColor="#e8f0fe"
                         />
                         <StyledTreeItem
-                            nodeId="6"
+                            nodeId="8"
                             labelText="최예소라"
                             // labelIcon={SupervisorAccountIcon}
                             // labelInfo="5"
@@ -136,7 +136,7 @@ const UserTreeView = () => {
                             bgColor="#e8f0fe"
                         />
                         <StyledTreeItem
-                            nodeId="7"
+                            nodeId="9"
                             labelText="김성진"
                             // labelIcon={SupervisorAccountIcon}
                             // labelInfo="5"
@@ -145,7 +145,7 @@ const UserTreeView = () => {
                         />
                     </StyledTreeItem>
                     <StyledTreeItem
-                        nodeId="8"
+                        nodeId="5"
                         labelText="2팀"
                         labelIcon={SupervisorAccountIcon}
                         labelInfo="5"
@@ -153,7 +153,7 @@ const UserTreeView = () => {
                         bgColor="#e8f0fe"
                     >
                         <StyledTreeItem
-                            nodeId="9"
+                            nodeId="10"
                             labelText="강병주"
                             // labelIcon={SupervisorAccountIcon}
                             // labelInfo="5"
@@ -161,7 +161,7 @@ const UserTreeView = () => {
                             bgColor="#e8f0fe"
                         />
                         <StyledTreeItem
-                            nodeId="10"
+                            nodeId="11"
                             labelText="이재연"
                             // labelIcon={SupervisorAccountIcon}
                             // labelInfo="5"
@@ -169,7 +169,7 @@ const UserTreeView = () => {
                             bgColor="#e8f0fe"
                         />
                         <StyledTreeItem
-                            nodeId="11"
+                            nodeId="12"
                             labelText="조대준"
                             // labelIcon={SupervisorAccountIcon}
                             // labelInfo="5"
@@ -177,7 +177,7 @@ const UserTreeView = () => {
                             bgColor="#e8f0fe"
                         />
                         <StyledTreeItem
-                            nodeId="12"
+                            nodeId="13"
                             labelText="김현교"
                             // labelIcon={SupervisorAccountIcon}
                             // labelInfo="5"
@@ -187,7 +187,7 @@ const UserTreeView = () => {
                     </StyledTreeItem>
                 </StyledTreeItem>
                 <StyledTreeItem
-                    nodeId="13"
+                    nodeId="3"
                     labelText="디아모개발부"
                     labelIcon={SupervisorAccountIcon}
                     labelInfo="4"
