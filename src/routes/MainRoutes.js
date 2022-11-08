@@ -9,7 +9,7 @@ import LogIn from "../components/login/containers/LogIn";
 import FindPw from "../components/login/containers/FindPw";
 import FindId from "../components/login/containers/FindId";
 import WorkLog from "../components/workLog/containers/WorkLog";
-import Calendar from "../components/calendar/containers/Calendar";
+import MonthlyCalendar from "../components/monthlyCalendar/containers/MonthlyCalendar";
 import Dashboard from "../components/dashboard/containers/Dashboard";
 import UserManagement from "../components/userConfiguration/containers/UserManagement";
 
@@ -62,8 +62,8 @@ const MainRoutes = {
       element: <WorkLog />,
     },
     {
-      path: "calendar",
-      element: <Calendar />,
+      path: "monthlyCalendar",
+      element: <MonthlyCalendar />,
     },
     {
       path: "dashboard",

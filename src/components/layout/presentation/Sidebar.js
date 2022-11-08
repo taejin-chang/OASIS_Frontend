@@ -55,7 +55,7 @@ const Sidebar = ({ themeDirection, drawerWidth, handleDrawerClose, open }) => {
       <List>
         <ListItem disablePadding>
           <Link
-            to="/calendar"
+            to="/monthlyCalendar"
             style={{ width: "100%", textDecoration: "none", color: "#000000" }}
           >
             <ListItemButton>
